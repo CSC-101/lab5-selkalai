@@ -19,6 +19,27 @@ class TestCases(unittest.TestCase):
 
 
     #### Add tests for Time.__eq__
+    def test_Time_eq_1(self):
+        time_one = data.Time(8, 20, 3)
+        time_two = data.Time(8, 20, 3)
+        result = data.Time.__eq__(time_one, time_two)
+        expected = True
+        self.assertEqual(expected, result)
+
+    def test_Time_eq_2(self):
+        time_one = data.Time(8, 21, -57)
+        time_two = data.Time(8, 20, 3)
+        result = data.Time.__eq__(time_one, time_two)
+        expected = False
+        self.assertEqual(expected, result)
+
+    def test_Time_eq_3(self):
+        time_one = data.Time(0, 0, 0)
+        time_two = data.Time(0, 0, 0)
+        result = data.Time.__eq__(time_one, time_two)
+        expected = False
+        self.assertNotEqual(expected, result)
+
 
     #### Add tests for Time.__repr__
 
