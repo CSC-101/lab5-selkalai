@@ -42,6 +42,17 @@ class TestCases(unittest.TestCase):
 
 
     #### Add tests for Time.__repr__
+    def test_Time_str_1(self):
+        time_one = data.Time(0, 0, 0)
+        result = data.Time.__str__(time_one)
+        expected = "Time: 0 hours, 0 minutes, 0 seconds"
+        self.assertEqual(expected, result)
+
+    def test_Time_str_2(self):
+        time_one = data.Time(9, 187, -8)
+        result = data.Time.__str__(time_one)
+        expected = "Time: 9 hours, 187 minutes, -8 seconds"
+        self.assertEqual(expected, result)
 
 
 
