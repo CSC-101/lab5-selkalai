@@ -13,10 +13,20 @@ class Time:
         self.minute = minute
         self.second = second
 
+  #function def __eq__() will take parameters of self and other and will
+    # return a bool if self and other are equal
+    def __eq__(self, other)-> bool:
+        return (other is self or type(other) == Time and
+                math.isclose(self.hour, other.hour) and
+                math.isclose(self.minute, other.minute) and
+                math.isclose(self.second, other.second))
 
     # Provide a developer-friendly string representation of the object.
     # input: Time for which a string representation is desired. 
     # output: string representation
+
+    def __repr__(self) -> str:
+        return 'Time({}, {}, {})'.format(self.hour, self.minute, self.second)
 
 
     # Compare the Time object with another value to determine equality.
