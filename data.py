@@ -26,7 +26,7 @@ class Time:
     # output: string representation
 
     def __repr__(self) -> str:
-        return 'Time: {} hours, {} minutes, {} seconds'.format(self.hour, self.minute, self.second)
+        return 'Time({}, {}, {})'.format(self.hour, self.minute, self.second)
 
 
     # Compare the Time object with another value to determine equality.

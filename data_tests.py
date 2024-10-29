@@ -55,8 +55,6 @@ class TestCases(unittest.TestCase):
         self.assertEqual(expected, result)
 
 
-
-
     #### Point tests
     def test_Point_1(self):
         point = data.Point(7, 20)
